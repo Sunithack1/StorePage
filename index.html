@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Store Page</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-app="storeApp" ng-controller="storeController">
+
+	<!--<div ng-app="storeApp" ng-controller="storeController">-->
+
+	<h1> {{storeData.site|uppercase}} </h1>
+	
+	<select ng-model="selectedOption" ng-options="option.value as option.name for option in priceOptions"></select>
+    <select ng-model="sortBy" ng-options="x for (x,y) in sortingOptions">
+    	<option value="" selected> Sort By </option>
+    </select>
+	<div id="main">
+
+	 <div class="products" ng-repeat="product in storeData.products| orderBy: sortBy" ng-show = true ng-if = "product.msrpInCents <= selectedOption">
+	 	<div><img ng-src="http:{{product.mainImage.ref}}" alt="{{product.mainImage.type}}"></div>
+	 	<div> {{product.name}}</div>
+        <div>{{product.msrpInCents/100| currency}}</div>
+	 </div>
+
+	 </div>
+
+	<!--</div>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="store.js"></script> 
+</body>
+</html>
