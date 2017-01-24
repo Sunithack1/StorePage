@@ -11,7 +11,7 @@
 	<!--<div ng-app="storeApp" ng-controller="storeController">-->
 
 	<h1> {{storeData.site|uppercase}} </h1>
-	
+	<label> Filters: </label>
 	<select ng-model="selectedOption" ng-options="option.value as option.name for option in priceOptions"></select>
     <select ng-model="sortBy" ng-options="x for (x,y) in sortingOptions">
     	<option value="" selected> Sort By </option>
