@@ -1,3 +1,7 @@
+body {
+	background-color: #ADD8E6;
+}
+
 h1 {	
 	color: #FFFFFF;
 	text-align: center;
@@ -5,6 +9,7 @@ h1 {
 	height: 100px;
 	line-height: 2.5em;
 	font-size: 40px;
+	margin-top: 0px;
 	
 }
 
@@ -12,18 +17,28 @@ h1 {
 	width: 1335px;
 	margin: auto;
 }
+
+label {
+	display: block;
+	margin-left: 1280px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
 select {
 	margin-bottom: 20px;
 	width: 150px;
-	margin-left: 1290px;
-    border: 1px solid black;
+	margin-left: 1280px;
+    border: 1px solid #000000;
     border-radius: 5px;
 }
+
 .products {
 	display: inline-block;
-	border: 2px solid black;
+	/*border: 2px solid black; */
 	text-align: center;
 	margin: 10px 10px;
 	padding: 10px 10px;
 	border-radius: 10px;
+	background-color: #FFFFFF;
 }
